@@ -12,12 +12,12 @@ localModel.js is a drop in persistence strategy extension for Backbone.js (http:
 
 In order to determine whether or not the locally stored version of a model is current, localModel requires the server to maintain a list of when each model was last modified. It does not need to be complete - localModel will assume that any model without a specified modification time should be loaded from the server when it is first requested. That list should be bootstrapped into the page when it is loaded (eg. by including it in your template file) in the following way:
 
-'''javascript
+```javascript
 window.localModel.newModTimes([
 	{"/model/url/including/id":Timestamp(integer seconds from UNIX epoch)},
 	...
 ]);
-'''
+```
 
 localModel also expects an extra "timeLoaded" attribute to be passed from the server with every model - the value should be the current time (the time the request is served) expressed as seconds since the UNIX epoch. (Only using server timestamps avoids trying to resolve time differences between server and client.) Since this value will be added to the model just like any other, it is obviously important to rename it if it conflicts with any existing model attributes.
 
