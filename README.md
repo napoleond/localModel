@@ -34,5 +34,5 @@ localModel.js attaches a localModel object to the window and overwrites Backbone
 - **setModTimes(times)** accepts a set of key/value pairs where the key is the model URL and the value is a UNIX timestamp in seconds denoting the time at which the model was last modified on the server, adding them to localModel's internal modTimes object and returning a reference to it.
 - **timeModified(model)** returns the time at which a model was last modified on the server (assuming that it was not modified in another session since initial page load) or false if undefined.
 - **getLocal(model)** returns specified model as a JSON string from localStorage, or false if localStorage is undefined.
-- **setLocal(modelURL,modelJSON)** adds or updates a model in localStorage, returns the JSON string on success or false if localStorage is undefined.
+- **setLocal(modelURL,modelObj)** adds or updates a model in localStorage, returns the JSON string on success or false if localStorage is undefined.
 - **removeLocal(model)** removes model from localStorage, returning true unless localStorage is undefined.
