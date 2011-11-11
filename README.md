@@ -25,7 +25,7 @@ Finally, each model must have a globally unique URL. This requirement is probabl
 
 ##On The Client
 
-Besides including the list of times modified, simply include localModel.js and everything should work! It is considered good practice to also bootstrap a list of models on initial load - it is up to the developer to strike the proper balance between initial and subsequent loads (where the models could already be in localStorage) here. A simple cookie arrangement might be a good way to help make that decision.
+Besides including the list of times modified, simply include localModel.js (**after** including backbone.js) and everything should work! It is considered good practice to also bootstrap a list of models on initial load - it is up to the developer to strike the proper balance between initial and subsequent loads (where the models could already be in localStorage) here. A simple cookie arrangement might be a good way to help make that decision.
 
 ##Under The Hood
 
