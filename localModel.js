@@ -28,11 +28,7 @@ window.localModel = {
 	}
 };
 
-Backbone.sync = function(method, model, options) {
-//for create/update, setLocal(model)
-//for read, getLocal(modelURL)
-//for delete, removeLocal(modelURL)
-		
+Backbone.sync = function(method, model, options) {	
 	var type = methodMap[method];
 
 	// Default JSON-request options.
