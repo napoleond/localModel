@@ -41,8 +41,11 @@ Backbone.sync = function(method, model, options) {
 	//if reading
 	if (method=="read") {
 		//if local version exists and is current, use that
-		if (current) return options.success(data,"success",{"readyState":4,"status":200,"statusText":"success"});
-		else {//otherwise make sure that the model gets added to localstorage
+		if (current) {
+			var fakeXHR = {"readyState":4,"status":200,"statusText":"success"};
+			options.success(data,"success",fakeXHR);
+			return fakeXHR;
+		} else {//otherwise make sure that the model gets added to localstorage
 			params.success = function(d,s,x) {
 				localModel.setLocal(model.url(),d);
 				options.success(d,s,x);
