@@ -14,7 +14,7 @@ In order to determine whether or not the locally stored version of a model is cu
 
 ```javascript
 window.localModel.setModTimes({
-	{"/model/url/including/id":Timestamp(integer seconds from UNIX epoch)},
+	"/model/url/including/id":Timestamp(integer seconds from UNIX epoch),
 	...
 });
 ```
