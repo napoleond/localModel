@@ -1,7 +1,7 @@
 window.localModel = {
 	_modTimes: {},
 	setModTimes: function(times) {
-		return _.extend(this._modTimes,{times});
+		return _.extend(this._modTimes,times);
 	},
 	timeModified: function(model) {
 		return this._modTimes[model.url()]||2000000000; // if modTime isn't set, return a timestamp for ~2050 to make sure that the model is loaded
