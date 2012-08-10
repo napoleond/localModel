@@ -1,7 +1,3 @@
-#localModel.js
-
-**While I hope the following is pretty straightforward, I will try to get an example up before too long.**
-
 ##Introduction
 
 localModel.js is a drop in persistence strategy extension for Backbone.js (http://documentcloud.github.com/backbone/) that is meant to reduce unnecessary HTTP requests to the server (making it very useful for mobile web applications). It wouldn't be too difficult to modify it for syncing between online/offline use. (I will try to add that functionality when I have time, but feel free to send me a pull request!) localModel.js does NOT merge model edits - it merely chooses which version of the model to keep (based on when it was created/modified) and then updates either the server or localStorage to reflect that decision.
